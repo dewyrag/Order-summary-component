@@ -1,0 +1,170 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    background: url(images/pattern-background-mobile.svg)  var(--pale-blue) no-repeat;
+    background-size: contain;
+
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.container {
+    background-color: white;
+    width: 90%;
+    max-width: 25rem;
+    border-radius: 1rem 1rem  1rem 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 1rem;
+}
+
+.illu {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.text-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.summary {
+    color: var(--dark-blue);
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.text {
+    color: var(--desaturated-blue);
+    font-weight: 700;
+    line-height: 1.5rem;
+    width: 90%;
+    margin-top: 1rem;
+}
+
+.plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    background-color: var(--very-pale-blue);
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.plan-type {
+    font-size: 1rem;
+    color: var(--dark-blue);
+    font-weight: 900;
+}
+
+.year-amount {
+    color: var(--desaturated-blue);
+    font-weight: 700;
+    font-size: 0.950rem;
+}
+
+.change {
+    color: var(--bright-blue);
+    font-weight: 900;
+    font-size: .9em;
+    margin-left: 3rem;
+}
+
+.change:hover, .change:focus, a:hover {
+    color: hsla(245, 75%, 52%, 0.5);
+    text-decoration: none;
+}
+
+.payment-btn {
+    width: 95%;
+    padding: 1rem;
+    background-color: var(--bright-blue);
+    border: none;
+    border-radius: 0.75rem;
+    color: white;
+    font-weight: 900;
+    box-shadow: 0rem 0.5rem 1.5rem hsla(245, 75%, 52%, 0.4);
+    cursor: pointer;
+}
+
+.payment-btn:hover, .payment-btn:focus {
+    background-color: hsla(245, 75%, 52%, 0.7);
+    text-decoration: none;
+}
+
+.cancel-btn {
+    border: none;
+    background-color: transparent;
+    color: var(--desaturated-blue);
+    font-weight: 900;
+    font-size: .9rem;
+    width: 95%;
+    margin: 1.5rem auto 1rem auto;
+    cursor: pointer;
+}
+
+.cancel-btn:hover, .cancel-btn:focus {
+    color: var(--dark-blue);
+}
+
+@media (min-width: 79.25rem) {
+    body {
+        background: url(images/pattern-background-desktop.svg) var(--pale-blue) no-repeat;
+        background-size: contain;
+    }
+
+    .card {
+        padding: 2rem;
+    }
+
+    .illu {
+        margin-bottom: -0.5rem;
+    }
+
+    .text-summary {
+        margin-bottom: 1.5rem;
+    }
+
+    .plan {
+        width: 90%;
+    }
+
+    .payment-btn {
+        width: 90%;
+    }
+
+    .cancel-btn {
+        width: 90%;
+    }
+}
